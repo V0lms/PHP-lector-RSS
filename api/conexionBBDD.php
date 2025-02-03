@@ -1,8 +1,10 @@
 <?php
 
 $Repit=false;
-$host="postgres://neondb_owner:npg_ito4ZxOywzF7@ep-autumn-feather-a25rwmok-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require";
+$host="ep-holy-firefly-a26hg6mf-pooler.eu-central-1.aws.neon.tech";
+$user="neondb_owner";
+$password="npg_do47QlhJBNcC";
 
-$link= mysqli_connect($host);
+$link= mysqli_connect($host,$user,$password);
 $tildes=$link->query("SET NAMES 'utf8'");
-mysqli_select_db($link,'periodicos');
+mysqli_select_db($link,'neondb');
