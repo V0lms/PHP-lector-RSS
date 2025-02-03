@@ -1,7 +1,7 @@
 <?php
 
+global $ch=curl_init();
 function download($ruta){
-    $ch=curl_init();
     curl_setopt($ch,CURLOPT_URL,$ruta);
     curl_setopt($ch,CURLOPT_POST,0); // post descarga datos y get los sube
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
