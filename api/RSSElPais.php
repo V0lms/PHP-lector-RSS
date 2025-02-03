@@ -8,7 +8,7 @@ $oXML=new SimpleXMLElement($sXML);
 
 require_once "conexionBBDD.php";
 
-if(mysqli_connect_error()){
+if(pg_result_error()){
     printf("Conexión a el periódico El País ha fallado");
 }else{
         
@@ -40,9 +40,9 @@ if(mysqli_connect_error()){
 
               
                 $sql="SELECT link FROM elpais";
-                $result= mysqli_query($link,$sql); 
+                $result= pg_query($link,$sql); 
                 
-                while($sqlCompara=mysqli_fetch_array($result)){
+                while($sqlCompara=pg_fetch_array($result)){
                       
                      
                  if($sqlCompara['link']==$item->link){
@@ -60,7 +60,7 @@ if(mysqli_connect_error()){
                      if($Repit==false && $categoriaFiltro<>""){
                         
                         $sql="INSERT INTO elpais VALUES('','$item->title','$item->link','$item->description','$categoriaFiltro','$new_fPubli','$encoded')";
-                        $result= mysqli_query($link, $sql);
+                        $result= pg_query($link, $sql);
                         
                 } 
                
