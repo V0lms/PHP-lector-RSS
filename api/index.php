@@ -42,8 +42,8 @@
 
     function filtros($sql, $link)
     {
-        $filtrar = mysqli_query($link, $sql);
-        while ($arrayFiltro = mysqli_fetch_array($filtrar)) {
+        $filtrar = pg_query($link, $sql);
+        while ($arrayFiltro = pg_fetch_array($filtrar)) {
 
             echo "<tr>";
             echo "<th style='border: 1px #E4CCE8 solid;'>" . $arrayFiltro['titulo'] . "</th>";
