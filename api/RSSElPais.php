@@ -58,7 +58,7 @@ if(!$link){
                    
                 }
                      if($Repit==false && $categoriaFiltro<>""){
-                        $result= pg_insert($link, 'elpais',['',$item->title,$item->link,$item->description,$categoriaFiltro,$new_fPubli,$encoded]);
+                        $result= pg_insert($link, 'elpais',['',`$item->title`,`$item->link`,`$item->description`,`$categoriaFiltro`,`$new_fPubli`,`$encoded`]);
                         
                 } 
                
