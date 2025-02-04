@@ -44,8 +44,7 @@ if (!$link) {
         $media = $item->children("media", true);
         $description = $media->description;
 
-        $sql = "SELECT link FROM elmundo";
-        $result = pg_query($link, $sql);
+        $result = pg_query($link, "SELECT link FROM elmundo");
 
         while ($sqlCompara = pg_fetch_array($result)) {
 
@@ -62,8 +61,7 @@ if (!$link) {
 
         }
         if ($Repit == false && $categoriaFiltro <> "") {
-            $sql = "INSERT INTO elmundo VALUES('','$item->title','$item->link','$description','$categoriaFiltro','$new_fPubli','$item->guid')";
-            $result = pg_query($link, $sql);
+            $result = pg_query($link, "INSERT INTO elmundo VALUES('','$item->title','$item->link','$description','$categoriaFiltro','$new_fPubli','$item->guid')");
         }
         $categoriaFiltro = "";
     }

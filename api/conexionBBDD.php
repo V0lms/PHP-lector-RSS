@@ -1,7 +1,7 @@
 <?php
 
 $Repit = false;
-$conn_string = "postgres://neondb_owner:npg_5hXTxH1EuvpK@ep-calm-wildflower-a2d4l9gj-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require";
+$conn_string = "host=ep-holy-firefly-a26hg6mf.eu-central-1.aws.neon.tech dbname=neondb user=neondb_owner password=npg_do47QlhJBNcC";
 $link = pg_connect($conn_string);
 
 if (!$link) {
