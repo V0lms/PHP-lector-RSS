@@ -41,6 +41,7 @@ if(!$link){
               
                 $sql="SELECT link FROM elpais";
                 $result= pg_query($link,$sql); 
+                $Repit=true;
                 
                 while($sqlCompara=pg_fetch_array($result)){
                       
