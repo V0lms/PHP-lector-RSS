@@ -61,7 +61,7 @@ if (!$link) {
 
         }
         if ($Repit == false && $categoriaFiltro <> "") {
-            $result = pg_query($link, "INSERT INTO elmundo VALUES('','$item->title','$item->link','$description','$categoriaFiltro','$new_fPubli','$item->guid')");
+            $result = pg_insert($link, 'elmundo',['',$item->title,$item->link,$description,$categoriaFiltro,$new_fPubli,$item->guid]);
         }
         $categoriaFiltro = "";
     }
