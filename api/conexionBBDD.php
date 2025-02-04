@@ -8,4 +8,4 @@ if (!$link) {
 }
 
 pg_set_client_encoding($link,"UTF8");
-echo ".";
+echo "GOOD";
