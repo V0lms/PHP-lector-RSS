@@ -10,7 +10,7 @@ require_once "conexionBBDD.php";
 
 
 if (pg_last_error()) {
-    printf("Conexión a el periódico El Mundo ha fallado");
+    echo "Conexión a el periódico El Mundo ha fallado";
 } else {
 
     $contador = 0;

@@ -60,7 +60,7 @@
     }
     require_once "conexionBBDD.php";
     if (pg_last_error()) {
-        printf("Conexión fallida");
+        echo "Conexión fallida";
     } else {
         echo "<table style='border: 5px #E4CCE8 solid;'>";
         echo "<tr><th><p style='color: #66E9D9;'>TITULO</p ></th><th><p  style='color: #66E9D9;'>CONTENIDO</p ></th><th><p  style='color: #66E9D9;'>DESCRIPCIÓN</p ></th><th><p  style='color: #66E9D9;'>CATEGORÍA</p ></th><th><p  style='color: #66E9D9;'>ENLACE</p ></th><th><p  style='color: #66E9D9;'>FECHA DE PUBLICACIÓN</p ></th></tr>" . "<br>";
