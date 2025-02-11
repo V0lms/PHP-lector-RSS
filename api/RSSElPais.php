@@ -56,7 +56,9 @@ if (!$link) {
             }
         }
         if ($Repit == false && $categoriaFiltro <> "") {
-            $result = pg_insert($link, '', ['', $item->title, $item->link, $description, $categoriaFiltro, $new_fPubli, $item->guid]);
+
+            $sql = "INSERT INTO elpais VALUES('','$item->title','$item->link','$item->description','$categoriaFiltro','$new_fPubli','$encoded')";
+            $result = pg_query($link, $sql);
         }
 
         $categoriaFiltro = "";

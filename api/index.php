@@ -58,9 +58,8 @@
             echo "</tr>";
         }
     }
-    
     require_once "conexionBBDD.php";
-    if (mysqli_connect_error()) {
+    if (!$link) {
         printf("Conexión fallida");
     } else {
         echo "<table style='border: 5px #E4CCE8 solid;'>";
