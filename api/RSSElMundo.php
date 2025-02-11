@@ -9,7 +9,7 @@ $oXML = new SimpleXMLElement($sXML);
 require_once "conexionBBDD.php";
 
 
-if (pg_last_error()) {
+if (false) {
     echo "Conexión a el periódico El Mundo ha fallado";
 } else {
 
