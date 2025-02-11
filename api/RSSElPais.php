@@ -8,7 +8,7 @@ $oXML = new SimpleXMLElement($sXML);
 
 require_once "conexionBBDD.php";
 
-if (!$link) {
+if (pg_last_error()) {
     printf("Conexión a el periódico El País ha fallado");
 } else {
 

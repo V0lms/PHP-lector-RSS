@@ -59,7 +59,7 @@
         }
     }
     require_once "conexionBBDD.php";
-    if (!$link) {
+    if (pg_last_error()) {
         printf("Conexión fallida");
     } else {
         echo "<table style='border: 5px #E4CCE8 solid;'>";
