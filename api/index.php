@@ -58,6 +58,7 @@
             echo "</tr>";
         }
     }
+    
     require_once "conexionBBDD.php";
     if (mysqli_connect_error()) {
         printf("Conexión fallida");
